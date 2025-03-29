@@ -8,16 +8,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        lightHover: "var(--light-hover)",
-        darkHover: "var(--dark-hover)",
-        darkTheme: "var(--dark-theme)",
+        lightHover: "var(--color-light-hover)",
+        darkHover: "var(--color-dark-hover)",
+        darkTheme: "var(--color-dark-theme)",
       },
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
         ovo: ["Ovo", "serif"],
-      }
+      },
+      boxShadow: {
+        black: "var(--box-shadow-black)",
+        white: "var(--box-shadow-white)",
+      },
     },
   },
   plugins: [],
-}
-
+};

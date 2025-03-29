@@ -10,6 +10,15 @@ import alignRight from "./icon/align-right.svg";
 import close from "./icon/close.svg";
 import download from "./icon/download.svg";
 import handshake from "./icon/handshake.svg";
+import graduationCap from "./icon/graduation-cap.svg";
+import codeXml from "./icon/code-xml.svg";
+import blocks from "./icon/blocks.svg";
+import vscode from "./icon/vscode.svg";
+import postman from "./icon/postman.svg";
+import git from "./icon/git.svg";
+import firebase from "./icon/firebase.svg";
+import trae from "./icon/trae.svg";
+import dbeaver from "./icon/dbeaver.svg";
 
 export const assets = {
   logo,
@@ -26,4 +35,13 @@ export const icon = {
   close,
   download,
   handshake,
+  graduationCap,
+  codeXml,
+  blocks,
+  vscode,
+  postman,
+  git,
+  firebase,
+  trae,
+  dbeaver,
 };

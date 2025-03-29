@@ -4,7 +4,7 @@ import React, { FC } from "react";
 
 const Header: FC = () => {
   return (
-    <div className="w-11/12 max-w-3xl text-center h-screen flex flex-col items-center justify-center gap-4 absolute mx-auto left-0 right-0">
+    <div className="w-11/12 max-w-3xl text-center h-screen flex flex-col items-center justify-center gap-4 mx-auto left-0 right-0">
       <div>
         <Image
           src={assets.profile}
@@ -50,7 +50,7 @@ const Header: FC = () => {
       <Image
         src={assets.monas}
         alt="monas"
-        className="w-40 absolute right-5 top-80"
+        className="absolute hidden md:block md:w-40 md:right-[20%] md:top-80 -z-10"
       />
     </div>
   );

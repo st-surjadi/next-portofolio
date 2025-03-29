@@ -4,11 +4,14 @@
 
 :root {
   --color-light-hover: #fcf4ff;
-  --dark-hover: #2a004a;
-  --dark-theme: #11001f;
+  --color-dark-hover: #2a004a;
+  --color-dark-theme: #11001f;
 
   --font-outfit: "Outfit", sans-serif;
   --font-ovo: "Ovo", serif;
+
+  --box-shadow-black: 4px 4px 0px rgba(0, 0, 0, 0.5);
+  --box-shadow-white: 4px 4px 0px rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -23,4 +26,48 @@
 .filter-black-to-red {
   filter: invert(26%) sepia(77%) saturate(1660%) hue-rotate(337deg)
     brightness(114%) contrast(88%);
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+  .tooltip-text {
+    font-size: 12px;
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+  }
+
+  &:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
 }
