@@ -1,7 +1,11 @@
 import logo from "./images/logo.png";
 import headerBg from "./images/header-bg-color.png";
 import profile from "./images/profile.jpeg";
+import profile1 from "./images/profile_1.jpeg";
 import monas from "./images/monas.png";
+import logoAmartha from "./images/logo-amartha.png";
+import logoSalt from "./images/logo-salt.png";
+import logoSolusi from "./images/logo-solusi.png";
 
 import plugZap from "./icon/plug-zap.svg";
 import moon from "./icon/moon.svg";
@@ -19,12 +23,19 @@ import git from "./icon/git.svg";
 import firebase from "./icon/firebase.svg";
 import trae from "./icon/trae.svg";
 import dbeaver from "./icon/dbeaver.svg";
+import arrowRight from "./icon/arrow-right.svg";
+import arrowLeft from "./icon/arrow-left.svg";
+import externalLink from "./icon/external-link.svg";
 
 export const assets = {
   logo,
   profile,
+  profile1,
   monas,
   headerBg,
+  logoAmartha,
+  logoSalt,
+  logoSolusi,
 };
 
 export const icon = {
@@ -44,4 +55,7 @@ export const icon = {
   firebase,
   trae,
   dbeaver,
+  arrowRight,
+  arrowLeft,
+  externalLink,
 };

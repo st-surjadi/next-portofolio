@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { InfoType } from "./types";
 import InfoCard from "../Cards/InfoCard";
+import { NAVIGATION_ID } from "../Navbar/utils";
 
 const infos: InfoType[] = [
   {
@@ -38,7 +39,9 @@ const tools = [
 
 const About: React.FC = () => {
   return (
-    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div
+      id={NAVIGATION_ID.ABOUT}
+      className="w-full max-w-7xl mx-auto p-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-ovo">Introduction</h4>
       <h2 className="text-center text-5xl font-ovo">About Me</h2>
       <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
@@ -60,7 +63,7 @@ const About: React.FC = () => {
 
           <ul className="mb-6 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl">
             {infos.map((info, index) => (
-              <li key={index}>
+              <li key={index} className="h-full">
                 <InfoCard {...info} />
               </li>
             ))}

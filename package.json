@@ -11,9 +11,11 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.17",
     "autoprefixer": "^10.4.21",
+    "dayjs": "^1.11.13",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-modern-drawer": "^1.4.0",
     "sass": "^1.86.0"
   },
   "devDependencies": {

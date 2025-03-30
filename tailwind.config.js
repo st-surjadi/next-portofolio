@@ -20,6 +20,9 @@ module.exports = {
         black: "var(--box-shadow-black)",
         white: "var(--box-shadow-white)",
       },
+      gridTemplateColumns: {
+        auto: "repeat(auto-fit, minmax(200px, 1fr))",
+      },
     },
   },
   plugins: [],

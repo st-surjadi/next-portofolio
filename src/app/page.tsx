@@ -1,6 +1,7 @@
 import Header from "@components/Header";
-import { Navbar } from "@components/Navbar";
+import { Navbar } from "@/app/components/Navbar";
 import About from "@/app/components/About";
+import Experience from "./components/Experience";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <About />
+      <Experience />
     </>
   );
 }
