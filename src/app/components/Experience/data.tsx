@@ -9,7 +9,7 @@ export const experiences: Experience[] = [
     endDate: new Date(),
 
     description: (
-      <p>
+      <p className="text-sm text-gray-500 font-ovo">
         Started as a Frontend Engineer, I proactively took the opportunities to
         grow as a Full-stack Engineer, contributing to backend and mobile
         development across multiple teams.
@@ -89,7 +89,7 @@ export const experiences: Experience[] = [
     endDate: new Date("2022-02-01"),
 
     description: (
-      <p>
+      <p className="text-sm text-gray-500 font-ovo">
         After nurturing my passion for software development, I embraced the next
         chapter by joining a larger tech company, taking on new challenges and
         collaborating with bigger teams.
@@ -151,7 +151,7 @@ export const experiences: Experience[] = [
     endDate: new Date("2022-02-01"),
 
     description: (
-      <p>
+      <p className="text-sm text-gray-500 font-ovo">
         Transitioning from a Biomedical Engineering background to a self-taught
         Frontend Engineer, I discovered and nurtured my passion for software
         development.

@@ -19,7 +19,7 @@ const ExpCard: FC<ExpCardType> = ({ experience, onClick }) => {
         <Image
           src={experience.companyLogo}
           alt="company"
-          className="h-5 mb-4 object-contain"
+          className="w-full h-5 mb-4 object-contain"
         />
         <h3 className="text-lg text-gray-700 mb-2">{experience.position}</h3>
         <span className="text-xs text-gray-400 leading-5 mb-4 line-clamp-2">

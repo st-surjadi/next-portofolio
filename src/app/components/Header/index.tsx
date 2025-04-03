@@ -1,7 +1,7 @@
 import { assets, icon } from "@/assets";
 import Image from "next/image";
 import React, { FC } from "react";
-import { NAVIGATION_ID } from "./Navbar/utils";
+import { NAVIGATION_ID } from "../Navbar/utils";
 
 const Header: FC = () => {
   return (

@@ -10,7 +10,6 @@ const Navigation = [
   { text: "Home", href: `#${NAVIGATION_ID.TOP}` },
   { text: "About Me", href: `#${NAVIGATION_ID.ABOUT}` },
   { text: "Experiences", href: `#${NAVIGATION_ID.EXPERIENCE}` },
-  { text: "My Work", href: `#${NAVIGATION_ID.WORK}` },
   { text: "Contact Me", href: `#${NAVIGATION_ID.CONTACT}` },
 ];
 
@@ -45,12 +44,12 @@ export const Navbar: FC = () => {
         <div className="w-full max-w-7xl flex items-center justify-between mx-auto">
           <Link
             href={`#${NAVIGATION_ID.TOP}`}
-            className="w-52 flex md:justify-center">
+            className="md:w-48 flex md:justify-center">
             <Image src={assets.logo} alt="logo" width={120} />
           </Link>
 
           <ul
-            className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"} `}>
+            className={`hidden md:flex items-center gap-4 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"} `}>
             {Navigation.map((item, index) => (
               <li key={index}>
                 <a href={item.href} className="font-ovo">
@@ -60,13 +59,13 @@ export const Navbar: FC = () => {
             ))}
           </ul>
 
-          <div className="lg:w-52 flex justify-end lg:justify-between items-center gap-4">
+          <div className="lg:w-48 flex justify-end lg:justify-between items-center gap-4">
             <button>
               <Image src={icon.moon} alt="icon-moon" className="w-5" />
             </button>
             <a
               href={`#${NAVIGATION_ID.CONTACT}`}
-              className="hidden lg:flex items-center gap-3 px-10 py-3 border border-gray-400 rounded-full ml-4">
+              className="hidden lg:flex items-center gap-3 px-8 py-3 border border-gray-400 rounded-full ml-4">
               Connect <Image src={icon.plugZap} alt="plug-connect" width={20} />
             </a>
             <button onClick={toggleSideMenu} className="block md:hidden ml-3">

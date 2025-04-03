@@ -26,6 +26,7 @@ import dbeaver from "./icon/dbeaver.svg";
 import arrowRight from "./icon/arrow-right.svg";
 import arrowLeft from "./icon/arrow-left.svg";
 import externalLink from "./icon/external-link.svg";
+import doubleCheck from "./icon/double-check.svg";
 
 export const assets = {
   logo,
@@ -58,4 +59,5 @@ export const icon = {
   arrowRight,
   arrowLeft,
   externalLink,
+  doubleCheck,
 };

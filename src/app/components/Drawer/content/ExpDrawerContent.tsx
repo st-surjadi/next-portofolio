@@ -26,11 +26,12 @@ const ExpDrawerContent: FC<Props> = ({ exp }) => {
         </p>
       </div>
       <div className="flex-1 overflow-y-auto pr-4">
+        <div className="mb-4">{exp?.description}</div>
         <div className="mb-4">
           <h4 className="text-gray-700">Company Profile</h4>
           {exp?.companyProfile}
         </div>
-        <div className="mb-4">
+        <div className="mb-2">
           <h4 className="text-gray-700">Experiences</h4>
           {exp?.highlights}
         </div>

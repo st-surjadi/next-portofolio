@@ -1,9 +1,9 @@
-import { assets, icon } from "@/assets";
 import Image from "next/image";
 import React from "react";
 import { InfoType } from "./types";
 import InfoCard from "../Cards/InfoCard";
 import { NAVIGATION_ID } from "../Navbar/utils";
+import { assets, icon } from "@/assets";
 
 const infos: InfoType[] = [
   {
