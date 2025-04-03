@@ -27,6 +27,10 @@ import arrowRight from "./icon/arrow-right.svg";
 import arrowLeft from "./icon/arrow-left.svg";
 import externalLink from "./icon/external-link.svg";
 import doubleCheck from "./icon/double-check.svg";
+import mail from "./icon/mail.svg";
+import github from "./icon/github.svg";
+import instagram from "./icon/instagram.svg";
+import linkedin from "./icon/linkedin.svg";
 
 export const assets = {
   logo,
@@ -60,4 +64,8 @@ export const icon = {
   arrowLeft,
   externalLink,
   doubleCheck,
+  mail,
+  github,
+  instagram,
+  linkedin,
 };
