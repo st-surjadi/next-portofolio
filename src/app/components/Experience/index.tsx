@@ -6,6 +6,7 @@ import { experiences } from "./data";
 import ExpCard from "../Cards/ExpCard";
 import { Experience as ExpType } from "./types";
 import dynamic from "next/dynamic";
+import { motion } from "motion/react";
 
 const RMDrawer = dynamic(() => import("../Drawer"), { ssr: false });
 const DrawerContent = dynamic(
@@ -24,26 +25,64 @@ const Experience = () => {
 
   return (
     <>
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 0.4,
+          delay: 0.2,
+        }}
         id={NAVIGATION_ID.EXPERIENCE}
         className="w-full max-w-7xl mx-auto p-10 scroll-mt-20">
-        <h4 className="text-center mb-2 text-lg font-ovo">What I Offer</h4>
-        <h2 className="text-center text-5xl font-ovo">My Experiences</h2>
+        <motion.h4
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.4,
+          }}
+          className="text-center mb-2 text-lg font-ovo">
+          What I Offer
+        </motion.h4>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.4,
+          }}
+          className="text-center text-5xl font-ovo">
+          My Experiences
+        </motion.h2>
 
-        <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo">
+        <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.6,
+          }}
+          className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, itaque
           voluptate! Ut eligendi consequuntur consectetur, dolore placeat
           maiores iste praesentium.
-        </p>
+        </motion.p>
 
         <div className="grid grid-cols-auto gap-6 my-10">
           {experiences.map((exp, index) => (
-            <div key={index}>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.4,
+                delay: 0.8 + index * 0.2,
+              }}>
               <ExpCard experience={exp} onClick={onClickExpCard} />
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
       <RMDrawer
         open={isDrawerOpen}
         direction="bottom"

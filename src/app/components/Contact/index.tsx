@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { NAVIGATION_ID } from "../Navbar/utils";
 import { icon } from "@/assets";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 type state = "" | "loading" | "success";
 
@@ -59,14 +60,45 @@ const Contact = () => {
     <div
       id={NAVIGATION_ID.CONTACT}
       className="w-full max-w-7xl mx-auto p-10 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg font-ovo">Connect with me</h4>
-      <h2 className="text-center text-5xl font-ovo">Get in touch</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo">
+      <motion.h4
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.4,
+          delay: 0.2,
+        }}
+        className="text-center mb-2 text-lg font-ovo">
+        Connect with me
+      </motion.h4>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.4,
+          delay: 0.2,
+        }}
+        className="text-center text-5xl font-ovo">
+        Get in touch
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.4,
+          delay: 0.2,
+        }}
+        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo">
         I&apos;d love to hear from you! If you have questions, comments, or
         feedbacks, please use the form below.
-      </p>
+      </motion.p>
 
-      <form
+      <motion.form
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 0.4,
+          delay: 0.6,
+        }}
         className="max-w-2xl mx-auto"
         onSubmit={(e: React.FormEvent<HTMLFormElement>) => onSubmit(e)}>
         <div className="grid grid-cols-auto gap-6 mb-8">
@@ -97,7 +129,7 @@ const Contact = () => {
           type="submit">
           {result === "success" ? "Submitted" : "Submit"} {renderIcon(result)}
         </button>
-      </form>
+      </motion.form>
     </div>
   );
 };
