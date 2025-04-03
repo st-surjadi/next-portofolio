@@ -86,14 +86,14 @@ const Contact = () => {
           />
         </div>
         <textarea
-          className="w-full p-2 outline-none border border-gray-400 rounded-md bg-white mb-6"
+          className="w-full p-2 outline-none border border-gray-400 rounded-md bg-white mb-6 dark:text-black"
           rows={6}
           placeholder="Enter your message"
           name="message"
           required></textarea>
         <button
           disabled={result !== ""}
-          className="py-2 px-8 w-max flex items-center justify-between gap-2 bg-gray-800 text-white text-lg font-semibold rounded-full mx-auto hover:bg-gray-900 duration-300 disabled:opacity-80 disabled:cursor-not-allowed disabled:bg-gray-800"
+          className="py-2 px-8 w-max flex items-center justify-between gap-2 bg-red-500 text-white text-lg font-semibold rounded-full mx-auto hover:bg-red-800 duration-300 disabled:opacity-80 disabled:cursor-not-allowed disabled:bg-red-400"
           type="submit">
           {result === "success" ? "Submitted" : "Submit"} {renderIcon(result)}
         </button>

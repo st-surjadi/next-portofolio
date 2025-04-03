@@ -31,7 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${outfitFont.className} ${ovoFont.className} antialiased overflow-x-hidden leading-8`}>
+        className={`${outfitFont.className} ${ovoFont.className} antialiased overflow-x-hidden leading-8 dark:bg-darkTheme dark:text-white`}>
         {children}
       </body>
     </html>

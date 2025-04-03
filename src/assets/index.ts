@@ -1,4 +1,5 @@
 import logo from "./images/logo.png";
+import logoDark from "./images/logo_dark.png";
 import headerBg from "./images/header-bg-color.png";
 import profile from "./images/profile.jpeg";
 import profile1 from "./images/profile_1.jpeg";
@@ -34,6 +35,7 @@ import linkedin from "./icon/linkedin.svg";
 
 export const assets = {
   logo,
+  logoDark,
   profile,
   profile1,
   monas,

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import { InfoType } from "./types";
@@ -69,13 +71,15 @@ const About: React.FC = () => {
             ))}
           </ul>
 
-          <h4 className="mb-3 text-gray-700 font-ovo">Tools:</h4>
+          <h4 className="mb-3 text-gray-700 dark:text-white font-ovo">
+            Tools:
+          </h4>
           <ul className="flex items-center gap-3 sm:gap-5">
             {tools.map((tool, index) => (
               <div key={index} className="tooltip">
                 <li
                   key={index}
-                  className="flex items-center justify-center w-8 sm:w-10 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:scale-125 duration-300">
+                  className="flex items-center justify-center w-8 sm:w-10 aspect-square border hover:bg-lightHover dark:hover:bg-darkHover border-gray-400 hover:border-red-500 rounded-lg cursor-pointer hover:scale-125 duration-300">
                   <div className="tooltip">
                     <Image src={tool.icon} alt="tool" className="w-6" />
                   </div>

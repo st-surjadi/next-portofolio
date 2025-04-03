@@ -10,7 +10,7 @@ const Header: FC = () => {
         <Image
           src={assets.profile}
           alt="profile"
-          className="relative -top-40 md:-top-32 rounded-full w-32 h-32 object-cover"
+          className="relative -top-40 md:-top-32 rounded-full w-32 h-32 object-cover hover:scale-125 duration-300"
         />
         <Image
           src={assets.monas}
@@ -33,7 +33,7 @@ const Header: FC = () => {
         <a
           href={`#${NAVIGATION_ID.CONTACT}`}
           type="button"
-          className="px-10 py-3 border border-white rounded-full bg-red-500 text-white flex flex-items-center gap-2">
+          className="px-10 py-3 border border-white rounded-full bg-red-500 text-white flex flex-items-center gap-2 hover:shadow-black hover:-translate-y-1 duration-300">
           Connect with Me{" "}
           <Image
             src={icon.handshake}
@@ -44,7 +44,7 @@ const Header: FC = () => {
         <a
           href={`#${NAVIGATION_ID.CONTACT}`}
           type="button"
-          className="px-10 py-3 border border-red-500 rounded-full bg-white text-red-500 flex flex-items-center gap-2">
+          className="px-10 py-3 border border-red-500 rounded-full bg-white text-red-500 flex flex-items-center gap-2 hover:shadow-black hover:-translate-y-1 duration-300">
           My Resume{" "}
           <Image
             src={icon.download}
