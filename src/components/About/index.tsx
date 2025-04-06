@@ -17,7 +17,7 @@ const infos: InfoType[] = [
   {
     icon: icon.blocks,
     title: "Frameworks & Libraries",
-    description: "React, NextJS, Flutter, Svelte, Angular",
+    description: "React, NextJS, Flutter, Svelte, Angular, Strapi",
   },
   {
     icon: icon.graduationCap,
@@ -81,11 +81,10 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.4 }}
             className="mb-6 max-w-2xl font-ovo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            tristique, nisl eget accumsan tincidunt, nunc nunc ultricies nisl,
-            eget efficitur urna nunc vitae nunc. Sed tristique, nisl eget
-            accumsan tincidunt, nunc nunc ultricies nisl, eget efficitur urna
-            nunc vitae nunc.
+            Originally a Biomedical Engineer graduate, I transitioned into
+            software development through self-learning. Outside of work, I enjoy
+            playing basketball and have recently picked up a love for reading
+            and writing.
           </motion.p>
 
           <ul className="mb-6 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl">
@@ -127,7 +126,7 @@ const About: React.FC = () => {
                 className="tooltip">
                 <li
                   key={index}
-                  className="flex items-center justify-center w-8 sm:w-10 aspect-square border hover:bg-lightHover dark:hover:bg-darkHover border-gray-400 hover:border-red-500 rounded-lg cursor-pointer hover:scale-125 duration-300">
+                  className="flex items-center justify-center w-8 sm:w-10 aspect-square border bg-white dark:bg-darkTheme hover:bg-lightHover dark:hover:bg-darkHover border-gray-400 hover:border-red-500 rounded-lg cursor-pointer hover:scale-125 duration-300">
                   <div className="tooltip">
                     <Image src={tool.icon} alt="tool" className="w-6" />
                   </div>

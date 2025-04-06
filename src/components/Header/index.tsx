@@ -62,7 +62,7 @@ const Header: FC = () => {
           delay: 0.8,
         }}
         className="text-sm md:text-md mx-auto mb-4 font-ovo">
-        Passionate coder, dependable team player and certified bug fixer <br />
+        Passionate coder, team player and certified bug fixer <br />
         with 5 years of experience in multiple tech companies.
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4">

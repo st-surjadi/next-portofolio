@@ -63,9 +63,9 @@ const Experience = () => {
             delay: 0.6,
           }}
           className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, itaque
-          voluptate! Ut eligendi consequuntur consectetur, dolore placeat
-          maiores iste praesentium.
+          I bring 5 years of hands-on experience in software development,
+          contributing to projects across multiple tech companies. I focus on
+          writing clean, reliable code and working well with others.
         </motion.p>
 
         <div className="grid grid-cols-auto gap-6 my-10">

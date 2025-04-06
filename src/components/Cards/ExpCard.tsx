@@ -4,7 +4,7 @@ import React, { FC } from "react";
 import { Experience } from "../Experience/types";
 import Image from "next/image";
 import { icon } from "@/assets";
-import { useTheme } from "@/app/context/theme";
+import { useTheme } from "@/context/theme";
 
 type ExpCardType = {
   experience: Experience;
@@ -15,7 +15,7 @@ const ExpCard: FC<ExpCardType> = ({ experience, onClick }) => {
   const { isDarkMode } = useTheme();
   return (
     <div
-      className="flex flex-col justify-between border border-gray-400 hover:border-red-500 dark:hover:bg-darkHover rounded-lg p-3 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-300 h-full"
+      className="flex flex-col justify-between border bg-white dark:bg-darkTheme border-gray-400 hover:border-red-500 dark:hover:bg-darkHover rounded-lg p-3 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-300 h-full"
       onClick={() => onClick(experience)}>
       <div>
         <Image

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
 import "./styles/globals.scss";
+import { ThemeProvider } from "@/context/theme";
+import { Navbar } from "@/components/Navbar";
 
 const outfitFont = Outfit({
   subsets: ["latin"],
@@ -30,10 +32,13 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
       </head>
-      <body
-        className={`${outfitFont.className} ${ovoFont.className} antialiased overflow-x-hidden leading-8 dark:bg-darkTheme dark:text-white`}>
-        {children}
-      </body>
+      <ThemeProvider>
+        <body
+          className={`${outfitFont.className} ${ovoFont.className} antialiased overflow-x-hidden leading-8 dark:bg-darkTheme dark:text-white`}>
+          <Navbar />
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

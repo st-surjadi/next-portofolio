@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "@/app/context/theme";
+import { useTheme } from "@/context/theme";
 import { assets, icon } from "@/assets";
 import Image from "next/image";
 import React from "react";

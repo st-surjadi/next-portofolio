@@ -3,4 +3,5 @@ export enum NAVIGATION_ID {
   ABOUT = "about",
   EXPERIENCE = "experience",
   CONTACT = "contact",
+  BLOG = "blog",
 }

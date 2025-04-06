@@ -1,8 +1,8 @@
 "use client";
 
 import React, { FC } from "react";
-import { Experience } from "@components/Experience/types";
-import useDate from "@/app/hooks/useDate";
+import { Experience } from "@/components/Experience/types";
+import useDate from "@/hooks/useDate";
 
 type Props = {
   exp: Experience | null;
@@ -21,8 +21,8 @@ const ExpDrawerContent: FC<Props> = ({ exp }) => {
       <div className="flex justify-between items-center mb-4">
         <h4 className="text-xl text-gray-700">{exp?.position}</h4>
         <p className="text-gray-500">
-          {getDateStr(exp?.startDate, startEndFormat)} -{" "}
-          {getDateStr(exp?.endDate, startEndFormat)}
+          {getDateStr({ date: exp?.startDate, format: startEndFormat })} -{" "}
+          {getDateStr({ date: exp?.endDate, format: startEndFormat })}
         </p>
       </div>
       <div className="flex-1 overflow-y-auto pr-4">

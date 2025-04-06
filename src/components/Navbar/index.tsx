@@ -5,13 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { FC, useEffect, useRef, useState } from "react";
 import { NAVIGATION_ID } from "./utils";
-import { useTheme } from "@/app/context/theme";
+import { useTheme } from "@/context/theme";
 
-const Navigation = [
-  { text: "Home", href: `#${NAVIGATION_ID.TOP}` },
-  { text: "About Me", href: `#${NAVIGATION_ID.ABOUT}` },
-  { text: "Experiences", href: `#${NAVIGATION_ID.EXPERIENCE}` },
-  { text: "Contact Me", href: `#${NAVIGATION_ID.CONTACT}` },
+type NavItem = {
+  text: string;
+  href: string;
+};
+
+const Navigation: NavItem[] = [
+  { text: "Home", href: `/#${NAVIGATION_ID.TOP}` },
+  { text: "About Me", href: `/#${NAVIGATION_ID.ABOUT}` },
+  { text: "Experiences", href: `/#${NAVIGATION_ID.EXPERIENCE}` },
+  { text: "Contact Me", href: `/#${NAVIGATION_ID.CONTACT}` },
 ];
 
 export const Navbar: FC = () => {
@@ -38,15 +43,17 @@ export const Navbar: FC = () => {
 
   return (
     <div className="flex justify-center w-full">
-      <div className="fixed top-0 w-11/12 -z-10 translate-y-[-30%] dark:hidden">
-        <Image src={assets.headerBg} alt="header-bg" className="w-full" />
+      <div className="fixed top-0 w-11/12 -z-10 translate-y-[-20%] dark:hidden">
+        <Image
+          src={assets.headerBg}
+          alt="header-bg"
+          className="w-full h-[130vh]"
+        />
       </div>
       <nav
         className={`w-full fixed px-5 lg:px-8 py-4 z-40 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20" : ""}`}>
         <div className="w-full max-w-7xl flex items-center justify-between mx-auto">
-          <Link
-            href={`#${NAVIGATION_ID.TOP}`}
-            className="md:w-48 flex md:justify-center">
+          <Link href={`/`} className="md:w-48 flex md:justify-center">
             <Image
               src={isDarkMode ? assets.logoDark : assets.logo}
               alt="logo"
@@ -74,7 +81,7 @@ export const Navbar: FC = () => {
               />
             </button>
             <a
-              href={`#${NAVIGATION_ID.CONTACT}`}
+              href={`/#${NAVIGATION_ID.CONTACT}`}
               className="hidden lg:flex items-center gap-3 px-8 py-3 border border-gray-400 hover:border-red-500 rounded-full ml-4 dark:border-white-50 hover:shadow-black hover:-translate-y-1 duration-300">
               Connect{" "}
               <Image
