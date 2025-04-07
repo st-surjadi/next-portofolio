@@ -16,6 +16,7 @@ export type BlogType = {
   slug: string;
   excerpt: string;
   publishedAt: string;
+  createdAt: string;
   coverImage: MediaType;
   author: AuthorType;
   content: ComponentType[];

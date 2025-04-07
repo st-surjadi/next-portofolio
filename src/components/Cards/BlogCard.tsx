@@ -11,25 +11,25 @@ type BlogCardType = {
 
 const BlogCard: FC<BlogCardType> = ({ blog }) => {
   const { getDateStr } = useDate();
-  const publishedAt = useMemo(
+  const createdAt = useMemo(
     () =>
       getDateStr({
-        date: new Date(blog?.publishedAt),
+        date: new Date(blog?.createdAt),
         format: "MMMM D, YYYY",
         enablePresentStr: false,
       }),
-    [blog?.publishedAt, getDateStr],
+    [blog?.createdAt, getDateStr],
   );
 
   return (
     <a
       href={`/blog/${blog?.slug}`}
       className="flex flex-col justify-between border bg-white dark:bg-darkTheme border-gray-400 hover:border-red-500 dark:hover:bg-darkHover rounded-lg p-3 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-300 h-full">
-      <div className="image-wrapper w-full h-52 relative">
+      <div className="image-wrapper">
         <img
           src={blog?.coverImage?.formats?.small?.url}
           alt="cover-image"
-          className="object-cover rounded-lg"
+          className="object-cover rounded-lg w-full h-52"
         />
       </div>
       <div>
@@ -41,7 +41,7 @@ const BlogCard: FC<BlogCardType> = ({ blog }) => {
         </span>
         <div className="flex justify-between items-center">
           <span className="text-xs text-gray-600">Steven Sean</span>
-          <span className="text-xs text-gray-600">{publishedAt}</span>
+          <span className="text-xs text-gray-600">{createdAt}</span>
         </div>
       </div>
     </a>

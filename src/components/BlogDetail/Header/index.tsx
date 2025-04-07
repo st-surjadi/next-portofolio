@@ -36,7 +36,7 @@ const BlogDetailHeader: FC<Props> = ({
         <div>
           <p className="text-md md:text-xl font-semibold">{author?.name}</p>
           <p className="text-sm md:text-lg text-gray-500">
-            {author?.bio} <span className="mx-2">·</span>{" "}
+            {author?.bio} <span className="mx-1 font-bold">·</span> Updated on{" "}
             {getDateStr({
               date: new Date(publishedAt),
               format: "MMMM D, YYYY",
