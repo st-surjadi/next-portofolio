@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import useDate from "@/hooks/useDate";
 import { AuthorType } from "@/lib/strapi/types";
-import Image from "next/image";
 import React, { FC } from "react";
 
 type Props = {
@@ -27,11 +27,10 @@ const BlogDetailHeader: FC<Props> = ({
 
       <div className="flex gap-4 items-center">
         <div className="w-14 h-14 relative">
-          <Image
+          <img
             src={author?.avatar?.formats.small.url}
             alt="avatar"
-            fill
-            className="rounded-full object-cover"
+            className="rounded-full object-cover w-full h-full"
           />
         </div>
         <div>

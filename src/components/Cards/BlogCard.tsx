@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { FC, useMemo } from "react";
-import Image from "next/image";
 import { BlogType } from "@/lib/strapi/types";
 import useDate from "@/hooks/useDate";
 
@@ -26,11 +26,10 @@ const BlogCard: FC<BlogCardType> = ({ blog }) => {
       href={`/blog/${blog?.slug}`}
       className="flex flex-col justify-between border bg-white dark:bg-darkTheme border-gray-400 hover:border-red-500 dark:hover:bg-darkHover rounded-lg p-3 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-300 h-full">
       <div className="image-wrapper w-full h-52 relative">
-        <Image
+        <img
           src={blog?.coverImage?.formats?.small?.url}
           alt="cover-image"
           className="object-cover rounded-lg"
-          fill
         />
       </div>
       <div>

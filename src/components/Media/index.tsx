@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { FC } from "react";
-import Image from "next/image";
 import { ComponentType } from "@/lib/strapi/types";
 
 export type Props = {
@@ -9,11 +9,9 @@ export type Props = {
 const MediaBlock: FC<Props> = ({ block }) => {
   return (
     <div className="my-4">
-      <Image
+      <img
         src={block?.media?.formats?.medium?.url || ""}
-        alt={"media"}
-        height={block?.media?.formats?.medium?.height || 0}
-        width={block?.media?.formats?.medium?.height || 0}
+        alt={block?.caption || "media"}
         className="w-full h-auto object-contain"
       />
       {block?.caption ? (
