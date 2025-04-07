@@ -55,9 +55,20 @@ const BlogClient: FC<Props> = ({ blogs }) => {
           experiences worth sharing — from code to life outside the screen.
         </motion.p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          {blogs.map((blog) => {
-            return <BlogCard blog={blog} key={blog.id} />;
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {blogs.map((blog, index) => {
+            return (
+              <motion.div
+                key={blog.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.1 + 1,
+                }}>
+                <BlogCard blog={blog} />
+              </motion.div>
+            );
           })}
         </div>
       </motion.div>

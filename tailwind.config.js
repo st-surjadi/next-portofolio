@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import typography from "@tailwindcss/typography";
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -26,5 +28,5 @@ module.exports = {
     },
   },
   darkMode: "selector",
-  plugins: [],
+  plugins: [typography],
 };

@@ -7,6 +7,7 @@ import monas from "./images/monas.png";
 import logoAmartha from "./images/logo-amartha.png";
 import logoSalt from "./images/logo-salt.png";
 import logoSolusi from "./images/logo-solusi.png";
+import defaultProfile from "./images/empty-profile.jpg";
 
 import plugZap from "./icon/plug-zap.svg";
 import moon from "./icon/moon.svg";
@@ -43,6 +44,7 @@ export const assets = {
   logoAmartha,
   logoSalt,
   logoSolusi,
+  defaultProfile,
 };
 
 export const icon = {
