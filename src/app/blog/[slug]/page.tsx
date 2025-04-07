@@ -3,8 +3,10 @@ import BlogDetailClient from "./client";
 import { fetchBlogBySlug } from "@/lib/strapi/blog";
 import NotFound from "@/app/not-found";
 
-const BlogDetail = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = await params;
+type tParams = Promise<{ slug: string }>;
+
+const BlogDetail = async (props: { params: tParams }) => {
+  const { slug } = await props.params;
   const data = await fetchBlogBySlug({ slug }).catch((err) =>
     console.error(err),
   );
