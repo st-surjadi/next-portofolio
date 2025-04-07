@@ -26,9 +26,13 @@ export type MediaType = {
   formats: {
     small: {
       url: string;
+      height: number;
+      width: number;
     };
     medium: {
       url: string;
+      height: number;
+      width: number;
     };
   };
 };
