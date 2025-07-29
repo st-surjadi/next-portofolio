@@ -1,3 +1,5 @@
+@import "@notion-render/client/sass/theme.scss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -74,5 +76,22 @@
   &:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+
+.notion-render {
+  code {
+    background-color: #f5f5f5;
+    color: #d6336c;
+    font-family: 'Fira Code', 'Menlo', 'Consolas', monospace;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.95em;
+  }
+
+  a {
+    color: #d6336c;
+    text-decoration: underline;
   }
 }

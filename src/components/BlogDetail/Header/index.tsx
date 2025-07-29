@@ -2,7 +2,7 @@
 "use client";
 
 import useDate from "@/hooks/useDate";
-import { AuthorType } from "@/lib/strapi/types";
+import { AuthorType } from "@/lib/notion/types";
 import React, { FC } from "react";
 
 type Props = {
@@ -28,7 +28,7 @@ const BlogDetailHeader: FC<Props> = ({
       <div className="flex gap-4 items-center">
         <div className="w-14 h-14 relative">
           <img
-            src={author?.avatar?.formats.small.url}
+            src={author?.avatar}
             alt="avatar"
             className="rounded-full object-cover w-full h-full"
           />

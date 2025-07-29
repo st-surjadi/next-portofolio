@@ -3,11 +3,14 @@
 import { motion } from "motion/react";
 import React, { FC } from "react";
 import { NAVIGATION_ID } from "../Navbar/utils";
-import { BlogType } from "@/lib/strapi/types";
-import BlogCard from "../Cards/BlogCard";
+// import { BlogType } from "@/lib/strapi/types";
+// import BlogCard from "../Cards/BlogCard";
+import { PageObjectResponse } from "@notionhq/client";
+import NotionBlogCard from "../Cards/NotionBlogCard";
 
 type Props = {
-  blogs: BlogType[];
+  // blogs: BlogType[];
+  blogs: PageObjectResponse[];
 };
 
 const BlogClient: FC<Props> = ({ blogs }) => {
@@ -66,7 +69,8 @@ const BlogClient: FC<Props> = ({ blogs }) => {
                   duration: 0.4,
                   delay: index * 0.1 + 1,
                 }}>
-                <BlogCard blog={blog} />
+                {/* <BlogCard blog={blog} /> */}
+                <NotionBlogCard page={blog} />
               </motion.div>
             );
           })}

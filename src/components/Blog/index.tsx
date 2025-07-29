@@ -1,11 +1,14 @@
-import React from "react";
+import { fetchPages } from "@/lib/notion";
 import BlogClient from "./client";
-import { fetchBlogs } from "@/lib/strapi/blog";
 
 const Blog = async () => {
-  const data = await fetchBlogs().catch((err) => console.error(err));
-
-  return data?.data ? <BlogClient blogs={data?.data} /> : null;
+  // Strapi
+  // const data = await fetchBlogs().catch((err) => console.error(err));
+  // return data?.data ? <BlogClient blogs={data?.data} /> : null;
+  
+  // Notion
+  const data = await fetchPages().catch((err) => console.error(err));
+  return data?.length ? <BlogClient blogs={data} /> : null;
 };
 
 export default Blog;

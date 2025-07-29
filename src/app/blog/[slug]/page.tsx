@@ -1,18 +1,23 @@
 import React from "react";
 import BlogDetailClient from "./client";
-import { fetchBlogBySlug } from "@/lib/strapi/blog";
 import NotFound from "@/app/not-found";
+import { fetchBySlug, fetchPageBlocks } from "@/lib/notion";
 
 type tParams = Promise<{ slug: string }>;
 
 const BlogDetail = async (props: { params: tParams }) => {
   const { slug } = await props.params;
-  const data = await fetchBlogBySlug({ slug }).catch((err) =>
-    console.error(err),
-  );
 
-  return data?.data?.length === 1 ? (
-    <BlogDetailClient blog={data.data[0]} />
+  const data = await fetchBySlug(slug).catch((err) => console.error(err));
+
+  if (!data) {
+    return <NotFound />;
+  }
+
+  const blocks = await fetchPageBlocks(data?.id);
+
+  return data ? (
+    <BlogDetailClient data={data} blocks={blocks} />
   ) : (
     <NotFound />
   );
