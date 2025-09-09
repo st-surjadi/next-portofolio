@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { NAVIGATION_ID } from "../Navbar/utils";
 import { icon } from "@/assets";
 import Image from "next/image";
@@ -10,25 +10,39 @@ type state = "" | "loading" | "success";
 
 const Contact = () => {
   const [result, setResult] = useState<state>("");
+  const formRef = useRef<HTMLFormElement>(null);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("loading");
 
-    const formData = new FormData(event.target as HTMLFormElement);
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORM_SECRET_KEY!);
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    const formData = new FormData(event.currentTarget);
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
 
-    const data = await response.json();
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
-    if (data.success) {
-      setResult("success");
-      (event.target as HTMLFormElement).reset();
-    } else {
-      console.error("Error: ", data);
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("success");
+        formRef.current?.reset();
+      } else {
+        console.error("Error:", data);
+        setResult("");
+      }
+    } catch (err) {
+      console.error("Unexpected error:", err);
       setResult("");
     }
   };
@@ -93,6 +107,7 @@ const Contact = () => {
       </motion.p>
 
       <motion.form
+        ref={formRef}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{
